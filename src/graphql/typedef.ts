@@ -18,6 +18,8 @@ input PersonInput {
   phone: String
   dob: String
   gender: String!
+    grade: String!
+    packageID: String!
 }
    
   type Person {
@@ -166,6 +168,8 @@ input PersonInput {
     packageId: Int!
     vendor: Vendor!
   }
+
+
 `;
 
 export default typeDefs;

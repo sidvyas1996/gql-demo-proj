@@ -3,7 +3,7 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 const resolvers = {
   Query: {
-    findPersonById: async (_: any, { id }: any, { prisma }: any) => {
+    findPersonById: async (_: any, { id }: any) => {
       try {
         const person = await prisma.person.findUnique({
           where: { id },
@@ -22,11 +22,12 @@ const resolvers = {
     },
   },
   Mutation: {
-    addPerson: async (_:any, { input}:any) => {
+    addPerson: async (_:any, {input}: any) => {
       try {
         const newPerson = await prisma.person.create({ data: input });
         return newPerson;
       } catch (error) {
+        console.error('Error adding person:', error);
         throw new Error('Failed to add person');
       }
     },
@@ -38,6 +39,7 @@ const resolvers = {
         });
         return updatedPerson;
       } catch (error) {
+        console.error('Error adding person:', error);
         throw new Error('Failed to update person');
       }
     },

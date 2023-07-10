@@ -1,0 +1,92 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+dist
+tmp
+/out-tsc
+
+# dependencies
+node_modules
+/.pnp
+.pnp.js
+
+# Serverless
+.serverless
+
+# Webpack
+.webpack
+.esbuild
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+# cypress
+frontend/cypress/screenshots
+frontend/cypress/videos
+
+# next.js
+frontend/.next
+frontend/out
+
+# cache
+frontend/.swc/
+
+# production
+frontend/build
+
+# Dotenv files
+.env*.local
+# Local folder
+backend/local
+# testing
+coverage
+
+# misc
+.DS_Store
+*.pem
+Thumbs.db
+
+# debug
+
+# sst build output
+.build
+.sst
+# CDK context
+cdk.context.json
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# dotenv local files
+.env*.local
+
+# local folder
+frontend/local
+
+# vercel
+frontend/.vercel
